@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+  <title>Food page</title>
+
+   <meta name = "viewport" content = "width=device-width,initial-scale=1.0">
+
+  <style>
+
+    body {
+
+      font-family: Arial;
+
+      margin: 0;
+
+      padding: 20px;
+
+      background: #f8f8f8;
+
+    }
+
+    h2 {
+
+      text-align: center;
+
+    }
+
+    .grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 15px;
+
+      margin-top: 20px;
+
+    }
+
+    .item {
+
+      background: white;
+
+      padding: 12px;
+
+      border-radius: 10px;
+
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+
+      text-align: center;
+
+    }
+
+    .price {
+
+      font-weight: bold;
+
+      margin: 5px 0;
+
+    }
+
+    button {
+
+      padding: 8px 12px;
+
+      border: none;
+
+      background: green;
+
+      color: white;
+
+      border-radius: 5px;
+
+      cursor: pointer;
+
+    }
+
+    button:hover {
+
+      background: rgb(0, 18, 100);
+
+    }
+
+    /* mobile responsive */
+
+    @media (max-width: 768px) {
+
+      .grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .grid {
+
+        grid-template-columns: repeat(1, 1fr);
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<h2> 🍽️ Food Menu</h2>
+
+
+
+<div class="grid">
+
+  <!-- 50 foods -->
+
+  <div class="item">
+
+    Burger
+
+    <div class="price">10 ETB</div>
+
+    <button onclick="pay('Burger', 10)">Pay 10 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Pizza
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Pizza', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Pasta
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Pasta', 50)">Pay 50 ETB</button>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <div class="item">
+
+    Normal Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+
+
+
+  <div class="item">
+
+    Normal Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+  
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 10)">Pay 10 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+<div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+  <div class="item">
+
+    Rice
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Rice', 50)">Pay 50 ETB</button>
+
+  </div>
+
+
+  <div class="item">
+
+    Chicken
+
+    <div class="price">50 ETB</div>
+
+    <button onclick="pay('Chicken', 50)">Pay 50 ETB</button>
+
+  </div>
+
+
+</div>
+
+<script src="kool.js">
+
+</script>
+
+</body>
+
+</html>
+

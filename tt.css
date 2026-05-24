@@ -1,0 +1,42 @@
+pf{
+    position: absolute;
+    left: 240px;
+    top: 1100px;
+    background-color: green;
+    color: rgb(253, 250, 250);
+    border-radius: 15px;
+    padding: 5px;
+  
+}
+pd{
+
+position: absolute;
+    left: 170px;
+    top: 1100px;
+    background-color: green;
+    color: rgb(253, 253, 253);
+    border-radius: 15px;
+    padding: 5px;
+  
+
+}
+p6{
+
+
+position: absolute;
+    left: 180px;
+    background-color: green;
+    color: rgb(250, 249, 249);
+    border-radius: 20px;
+  
+
+}
+dd{
+    position: absolute;
+    left: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    font: bold;
+    font: italic;
+    padding: 10px;
+}

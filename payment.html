@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="tt.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>payment</title>
+
+<style>
+
+/* RESET */
+
+*{
+
+    margin:0;
+
+    padding:0;
+
+    box-sizing:border-box;
+
+}
+
+body{
+
+    background:#111;
+
+    font-family:Arial;
+
+    overflow-x:hidden;
+
+    min-height:100vh;
+
+    padding-top:100px;
+
+}
+
+
+
+
+ds{
+ justify-content: center;
+    margin:0 auto;
+     max-width:100px;
+    height:auto;
+
+   
+        margin-top: 0px;
+      
+    
+
+    height:auto;
+    display:block;
+}
+
+
+
+
+/* ================= TOP BAR ================= */
+
+.top-bar{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    margin-top:20px;
+
+}
+
+.search-container{
+
+    width:70%;
+
+    max-width:550px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+/* SEARCH */
+
+.search-box{
+
+    flex:1;
+
+    height:55px;
+
+    background:#222;
+
+    border-radius:40px;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 18px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+
+}
+
+.search-icon{
+
+    color:white;
+
+    font-size:20px;
+
+    margin-right:10px;
+
+}
+
+.search-box input{
+
+    flex:1;
+
+    border:none;
+
+    outline:none;
+
+    background:transparent;
+
+    color:white;
+
+    font-size:18px;
+
+}
+
+/* MENU */
+
+.menu-btn{
+    position: absolute;
+    left: 339px;
+    top: 297px;
+
+    width:55px;
+
+    height:55px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#ff9800;
+
+    color:white;
+
+    font-size:26px;
+
+   
+
+}
+
+/* ================= SLIDER ================= */
+
+.slider{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  
+    padding: 10px;
+
+}
+
+.slider::before,
+
+.slider::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    width:120px;
+
+    height:100%;
+
+    z-index:2;
+
+}
+
+.slider::before{
+
+    left:0;
+
+    background:linear-gradient(to right,#111,transparent);
+
+}
+
+.slider::after{
+
+    right:0;
+
+    background:linear-gradient(to left,#111,transparent);
+
+}
+
+.slider-track{
+
+    display:flex;
+
+    gap:30px;
+
+    width:max-content;
+
+    animation:scroll 50s linear infinite;
+
+}
+
+/* FOOD CARD */
+
+.food-card{
+
+    width:300px;
+
+    height:420px;
+display: flex;
+justify-content: center;
+    border-radius:30px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    background:#222;
+
+    position:relative;
+
+    box-shadow:0 10px 30px rgba(0,0,0,0.5);
+
+}
+.food-card:hover{
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px  rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.food-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+.food-card img::hover{
+    
+    transform: translateY(0) scale(1.16);
+}
+
+/* OVERLAY */
+
+.overlay{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:100%;
+
+    padding:20px;
+
+    background:linear-gradient(transparent, rgba(0,0,0,0.95));
+
+}
+
+.overlay h2{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:5px;
+
+}
+
+.price{
+
+    color:#ff9800;
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-bottom:10px;
+
+}
+
+/* BUY BUTTON */
+
+.buy-btn{
+
+    display:inline-block;
+
+    padding:10px 20px;
+
+    background:#ff9800;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:25px;
+
+    font-weight:bold;
+
+}
+
+/* ANIMATION */
+
+@keyframes scroll{
+
+    0%{ transform:translateX(0); }
+
+    100%{ transform:translateX(-50%); }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .food-card{
+
+        width:250px;
+
+        height:360px;
+
+    }
+
+    .overlay h2{
+
+        font-size:22px;
+
+    }
+
+    .price{
+
+        font-size:18px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+  <ds>
+    <img src="llop.jpg" width="100" height="100">
+  </ds>
+
+  
+<br>
+
+<br>
+
+<br>
+
+<br>
+<!-- TOP SEARCH -->
+
+<div class="top-bar">
+
+    <div class="search-container">
+
+        <div class="search-box">
+
+            <span class="search-icon">🔍</span>
+
+            <input type="text" placeholder="Search food..." id="searchInput">
+
+        </div>
+<div>
+<button onclick="qh()"  class="menu-btn"  onclick="qh()"  >☰</button>
+<script>
+function qh(){
+
+  window.location.href="qaaz.html"
+}
+
+</script>
+   </div>
+
+
+
+    </div>
+
+</div>
+
+<!-- SLIDER -->
+
+<div class="slider">
+
+    <div class="slider-track">
+
+        <!-- FOOD -->
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+
+            <div class="overlay">
+
+                <h2>Pizza</h2>
+
+                <div class="price">800ETB</div>
+
+                <a href="https://ebirr.com" class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+            <div class="overlay">
+
+                <h2>Burger</h2>
+
+                <div class="price">600ETB</div>
+
+                <a href="https://ebirr.com" class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+
+            <div class="overlay">
+
+                <h2>Pasta</h2>
+
+                <div class="price">250ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+
+            <div class="overlay">
+
+                <h2>Juice</h2>
+
+                <div class="price">150ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+        <div class="food-card">
+
+            <img src="1.jpeg">
+            <div class="overlay">
+
+                <h2>COFFEE</h2>
+                <div class="price">200ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        
+
+
+        <div class="food-card">
+
+            <img src="6.jpeg">
+            <div class="overlay">
+
+                <h2>Chicken</h2>
+                <div class="price">900ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="food-card">
+
+            <img src="2.jpeg">
+            <div class="overlay">
+
+                <h2>Coffe</h2>
+                <div class="price">200ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="food-card">
+
+            <img src="3.jpeg">
+            <div class="overlay">
+
+                <h2>Tea</h2>
+                <div class="price">30ETB</div>
+
+                <a href="https://ebirr.com" class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="food-card">
+
+            <img src="4.jpeg">
+            <div class="overlay">
+
+                <h2>Sandwich</h2>
+                <div class="price">500ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+        <div class="food-card">
+
+            <img src="5.jpeg">
+            <div class="overlay">
+
+                <h2>Chicken</h2>
+                <div class="price">900ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <!-- DUPLICATE FOR INFINITE -->
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591">
+
+            <div class="overlay">
+
+                <h2>Pizza</h2>
+
+                <div class="price">800ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd">
+
+            <div class="overlay">
+
+                <h2>Burger</h2>
+
+                <div class="price">600ETB</div>
+
+                <a href="https://ebirr.com" class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9">
+
+            <div class="overlay">
+
+                <h2>Pasta</h2>
+
+                <div class="price">250ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+        <div class="food-card">
+
+            <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b">
+
+            <div class="overlay">
+
+                <h2>Juice</h2>
+
+                <div class="price">150ETB</div>
+
+                <a href="https://ebirr.com"  class="buy-btn">Buy Now</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<p6 onclick="nhh()" >Order more: </p6>
+
+
+
+<script>
+function nhh(){
+
+  window.location.href="qaaz.html"
+}
+
+
+
+
+
+
+</script>
+  
+
+
+
+
+
+
+
+
+<!-- SEARCH FUNCTION -->
+
+<script>
+
+const input = document.getElementById("searchInput");
+
+input.addEventListener("keyup", function(){
+
+    let value = input.value.toLowerCase();
+
+    let cards = document.querySelectorAll(".food-card");
+
+    cards.forEach(card => {
+
+        let name = card.querySelector("h2").textContent.toLowerCase();
+
+        if(name.includes(value)){
+
+            card.style.display = "block";
+
+        }else{
+
+            card.style.display = "none";
+
+        }
+
+    });
+
+});
+
+</script>
+<br>
+<br>
+<br>
+<br>
+
+
+<p style="color: aliceblue;" >
+<h3  style="color: aliceblue; text-align: center;"  >
+Welcome again to maamuus hotel</h3><br>
+<dd>page kan waa page ka<br>
+laka dalbado nooca <br>
+cunto eed rabtid <br>
+adiga oo taabaniya ordermore:<br>
+ ama menu da sare <br>
+sidoo kale macmiil faaiidada <br>
+uu kuu leeyahay page kan waa <br>
+in discount lakuu sameeyo <br>
+ islamarkaana aadan <br>
+ lamid noqon doonin<br>
+  macaamiisha kale <br>
+ kuwaasoo aanan<br>
+  isticmaalin web kan<br>
+
+
+</dd>
+</p>
+<br>
+<br>
+
+
+ <pd onclick="th()"  >Home: </pd>
+
+ <pf onclick="oh()" >contact: </pf>
+
+
+
+<script>
+function th(){
+
+  window.location.href="index.html"
+}
+
+</script>
+  
+
+
+
+<script>
+function oh(){
+
+  alert("hotel-owner = Sheekh badri\n number = 0915748236")
+}
+
+
+
+
+
+
+</script>
+  
+<br>
+
+<br>
+<br>
+</body>
+
+</html>

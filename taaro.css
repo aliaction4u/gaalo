@@ -1,0 +1,53 @@
+body{
+
+text-align:center;
+   background: linear-gradient(to right, #91509e, #5dd652);
+border-radius:20px;
+
+}
+se{
+    text-align:center;
+    border-radius:250px;
+    font-size:20px;
+      font-size: 6vw;
+}
+
+ps{ position:absolute;
+    right:20px;
+    top:7px;
+    
+    
+
+    color:rgb(224, 248, 7);
+    background-color:black;
+    border-radius:10px;
+     font-size: 4.5vw;
+}
+li{
+     margin:40px;
+  font-size: 6vw;
+  padding:15px;
+   
+   border-radius: 10px;
+
+   font-family: Arial,italic;
+    font-weight: 500px;
+   color: black;
+}
+
+
+d{
+    position:absolute;
+    left:50px;
+    width:100px;
+
+    margin:0 auto;
+     max-width:100%;
+    height:auto;
+   
+        margin-top: 100px;
+      
+   
+    height:auto;
+    display:block;
+}
